@@ -1,0 +1,205 @@
+{
+  "seed": 0,
+  "version": "0.1.0",
+  "environment": {
+    "python": "3.14.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 158 Stepping 10, GenuineIntel",
+    "cpu_count": 12,
+    "numpy": "2.4.3",
+    "scipy": "1.17.1",
+    "torch": "2.13.0+cpu",
+    "torch_num_threads": 6,
+    "cuda_available": false
+  },
+  "occlusion": {
+    "calibration_frames_per_kind": 36,
+    "eval_frames_per_kind": 60,
+    "reference": {
+      "edge_median": 0.16332632303237915,
+      "entropy_floor": 2.8163904385371437,
+      "edge_ratio_max": 0.5947428203123831,
+      "dark_fraction_min": 0.0625,
+      "confidence_min": 0.55
+    },
+    "kinds": {
+      "clean": {
+        "frames": 60,
+        "recall": 0.0,
+        "baseline_confident_rate": 1.0,
+        "false_confidence_rejection": 0.0,
+        "edge_rate": 0.0,
+        "entropy_rate": 0.0,
+        "dark_rate": 0.0,
+        "mean_edge_ratio": 1.0010980285464977,
+        "mean_entropy": 3.049204779177557,
+        "mean_tip_confidence": 1.130606880816839,
+        "mean_dark_fraction": 0.0
+      },
+      "smoke": {
+        "frames": 60,
+        "recall": 1.0,
+        "baseline_confident_rate": 1.0,
+        "false_confidence_rejection": 1.0,
+        "edge_rate": 1.0,
+        "entropy_rate": 1.0,
+        "dark_rate": 0.0,
+        "mean_edge_ratio": 0.19881939646976948,
+        "mean_entropy": 0.2551790692984111,
+        "mean_tip_confidence": 1.1579292519846334,
+        "mean_dark_fraction": 0.0
+      },
+      "splash": {
+        "frames": 60,
+        "recall": 1.0,
+        "baseline_confident_rate": 1.0,
+        "false_confidence_rejection": 1.0,
+        "edge_rate": 1.0,
+        "entropy_rate": 1.0,
+        "dark_rate": 0.0,
+        "mean_edge_ratio": 0.117319035572484,
+        "mean_entropy": 2.3952848386363224,
+        "mean_tip_confidence": 1.1884008418161365,
+        "mean_dark_fraction": 0.0
+      },
+      "blood": {
+        "frames": 60,
+        "recall": 1.0,
+        "baseline_confident_rate": 1.0,
+        "false_confidence_rejection": 1.0,
+        "edge_rate": 1.0,
+        "entropy_rate": 0.0,
+        "dark_rate": 0.36666666666666664,
+        "mean_edge_ratio": 0.18385051059347732,
+        "mean_entropy": 3.065826038378217,
+        "mean_tip_confidence": 1.045820942620988,
+        "mean_dark_fraction": 0.050461832682291666
+      },
+      "occluder": {
+        "frames": 60,
+        "recall": 1.0,
+        "baseline_confident_rate": 1.0,
+        "false_confidence_rejection": 1.0,
+        "edge_rate": 0.0,
+        "entropy_rate": 0.0,
+        "dark_rate": 1.0,
+        "mean_edge_ratio": 0.9546996675864424,
+        "mean_entropy": 3.03482180451482,
+        "mean_tip_confidence": 1.1396321694908376,
+        "mean_dark_fraction": 0.125
+      }
+    },
+    "primary_false_confidence_rejection": 1.0,
+    "pooled_false_confidence_rejection": 1.0,
+    "detection_latency_ms": {
+      "n": 120,
+      "mean_ms": 1.107669999570741,
+      "p50_ms": 1.0820000024978071,
+      "p99_ms": 1.730225033243187,
+      "max_ms": 1.7670000088401139
+    },
+    "smoke_sweep": [
+      {
+        "level": 0.0,
+        "frames": 24,
+        "recall": 0.0,
+        "false_confidence_rejection": 0.0
+      },
+      {
+        "level": 0.2,
+        "frames": 24,
+        "recall": 1.0,
+        "false_confidence_rejection": 1.0
+      },
+      {
+        "level": 0.4,
+        "frames": 24,
+        "recall": 1.0,
+        "false_confidence_rejection": 1.0
+      },
+      {
+        "level": 0.6,
+        "frames": 24,
+        "recall": 1.0,
+        "false_confidence_rejection": 1.0
+      },
+      {
+        "level": 0.8,
+        "frames": 24,
+        "recall": 1.0,
+        "false_confidence_rejection": 1.0
+      },
+      {
+        "level": 1.0,
+        "frames": 24,
+        "recall": 1.0,
+        "false_confidence_rejection": 1.0
+      }
+    ],
+    "smoke_trip_level": 0.2
+  },
+  "barrier": {
+    "episodes": 40,
+    "margin_mm": 1.0,
+    "control_hz": 100.0,
+    "dt_s": 0.01,
+    "steps": 400,
+    "u_max_mm_s": 30.0,
+    "alpha": 8.0,
+    "unconstrained": {
+      "penetration_rate": 1.0,
+      "worst_clearance_mm": -5.499850559307372,
+      "median_min_clearance_mm": -5.440512844234254,
+      "margin_hold_rate": 0.8921446384039899,
+      "goal_reach_rate": 1.0,
+      "mean_final_target_mm": 0.0008093435626761051
+    },
+    "cbf": {
+      "penetration_rate": 0.0,
+      "worst_clearance_mm": 1.1885914597384843,
+      "median_min_clearance_mm": 1.198955141247461,
+      "margin_hold_rate": 1.0,
+      "goal_reach_rate": 1.0,
+      "mean_final_target_mm": 0.0012455160021191659
+    },
+    "recovery": {
+      "safe_clearance_mm": 3.0,
+      "success_rate": 1.0,
+      "mean_steps": 28.75,
+      "mean_final_clearance_mm": 3.190039774157635
+    }
+  },
+  "interlock": {
+    "trials": 300,
+    "period_ms": 10.0,
+    "async": {
+      "n": 300,
+      "mean_ms": 1.324939667635287,
+      "p50_ms": 1.318099966738373,
+      "p99_ms": 1.955818985588848,
+      "max_ms": 2.5695000076666474
+    },
+    "sync": {
+      "n": 300,
+      "mean_ms": 6.128066332894377,
+      "p50_ms": 6.031450000591576,
+      "p99_ms": 11.418263981468044,
+      "max_ms": 11.54310000129044
+    },
+    "async_nan": 0,
+    "sync_nan": 0
+  },
+  "targets": {
+    "rejection_met": true,
+    "penetration_met": true,
+    "margin_met": true,
+    "latency_met": true,
+    "recovery_met": true
+  },
+  "demo_summary": {
+    "unconstrained_min_clearance_mm": -5.892730195849261,
+    "cbf_min_clearance_mm": 1.1575739211684235,
+    "cbf_penetrated": false,
+    "cbf_reached": true
+  }
+}
