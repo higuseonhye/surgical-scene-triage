@@ -26,7 +26,7 @@ Episodes place a disk of radius 5.5 mm on the open segment from start to target,
 A usable frame still contains high-frequency structure. The scalar used for that collapse is the variance of the Laplacian,
 
 ```math
-\operatorname{Var}(\nabla^2 I) < \tau_{\mathrm{edge}}.
+\operatorname{Var}(\nabla^2 I) \lt \tau_{\mathrm{edge}}.
 ```
 
 The second scalar is the Shannon entropy of luminance. On a histogram with masses $`p_k`$,

@@ -15,7 +15,7 @@ Electrosurgical smoke, fluid on the lens, and blood remove the high-frequency st
 The two-cue gate used for this failure mode is old signal processing. High-frequency collapse is written
 
 ```math
-\operatorname{Var}(\nabla^2 I) < \tau_{\mathrm{edge}}.
+\operatorname{Var}(\nabla^2 I) \lt \tau_{\mathrm{edge}}.
 ```
 
 Distributional collapse is the Shannon entropy of luminance,

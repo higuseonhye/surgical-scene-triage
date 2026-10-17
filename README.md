@@ -33,7 +33,7 @@ Electrosurgical smoke, fluid on the lens, and blood flatten tissue texture while
 Two cues mark that loss. A clear field still has high-frequency structure: fine surface detail and the metal edge of a tool. Smoke and lens contamination remove it. The usual scalar is the variance of the Laplacian,
 
 ```math
-\operatorname{Var}(\nabla^2 I) < \tau_{\mathrm{edge}}.
+\operatorname{Var}(\nabla^2 I) \lt \tau_{\mathrm{edge}}.
 ```
 
 The second cue is the entropy of the luminance distribution. A wash toward a single gray, or a field that has collapsed into uniform noise, moves

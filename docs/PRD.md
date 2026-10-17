@@ -17,7 +17,7 @@ When the frame is refused or the margin is already gone, the hold has to be issu
 Refuse the track when high-frequency structure collapses or the luminance distribution leaves the clean band.
 
 ```math
-\operatorname{Var}(\nabla^2 I) < \tau_{\mathrm{edge}}, \qquad H = -\sum_k p_k \ln p_k.
+\operatorname{Var}(\nabla^2 I) \lt \tau_{\mathrm{edge}}, \qquad H = -\sum_k p_k \ln p_k.
 ```
 
 The scored detector uses mean absolute Laplacian energy in place of the variance, one 64-bin frame histogram in place of a patch grid, and a dark-pixel fraction for a shaft that does not reduce edge energy. The baseline tip filter is not part of the decision.
