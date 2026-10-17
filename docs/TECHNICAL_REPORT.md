@@ -26,7 +26,7 @@ Episodes place a disk of radius 5.5 mm on the open segment from start to target,
 A usable frame still contains high-frequency structure. The scalar used for that collapse is the variance of the Laplacian,
 
 ```math
-\operatorname{Var}(\nabla^2 I) \lt \tau_{\mathrm{edge}}.
+\mathrm{Var}(\nabla^2 I) \lt \tau_{\mathrm{edge}}.
 ```
 
 The second scalar is the Shannon entropy of luminance. On a histogram with masses $`p_k`$,
@@ -47,7 +47,7 @@ Laplacian energy is the mean absolute response of a 3×3 Laplacian, a Torch conv
 E(I) = \frac{1}{|\Omega|}\sum_{p \in \Omega} |(\nabla^2 I)(p)|.
 ```
 
-$`E`$ and $`\operatorname{Var}(\nabla^2 I)`$ both fall when the high-frequency content is flattened. They are not the same number. The cut is on the ratio of $`E`$ to the clean median, not on a variance threshold. Entropy is the 64-bin histogram of the whole frame on $`[0, 1]`$, in nats. There is no patch grid. The dark fraction is the share of pixels below 0.12. The baseline confidence is a separate Torch convolution: a 9×9 zero-mean Gaussian on a 32×32 crop at the tracked tip, divided by the peak on an ideal tip. A confident track is a ratio of at least 0.55.
+$`E`$ and $`\mathrm{Var}(\nabla^2 I)`$ both fall when the high-frequency content is flattened. They are not the same number. The cut is on the ratio of $`E`$ to the clean median, not on a variance threshold. Entropy is the 64-bin histogram of the whole frame on $`[0, 1]`$, in nats. There is no patch grid. The dark fraction is the share of pixels below 0.12. The baseline confidence is a separate Torch convolution: a 9×9 zero-mean Gaussian on a 32×32 crop at the tracked tip, divided by the peak on an ideal tip. A confident track is a ratio of at least 0.55.
 
 Calibration, 36 frames per kind at seed 0, freezes three cuts before any evaluation frame is scored:
 
