@@ -16,27 +16,27 @@ When the frame is refused or the margin is already gone, the hold has to be issu
 
 Refuse the track when high-frequency structure collapses or the luminance distribution leaves the clean band.
 
-$$
+```math
 \operatorname{Var}(\nabla^2 I) < \tau_{\mathrm{edge}}, \qquad H = -\sum_k p_k \ln p_k.
-$$
+```
 
 The scored detector uses mean absolute Laplacian energy in place of the variance, one 64-bin frame histogram in place of a patch grid, and a dark-pixel fraction for a shaft that does not reduce edge energy. The baseline tip filter is not part of the decision.
 
 ### 2.2 Disk barrier
 
-Keep the command near $u_{\mathrm{nom}}$ subject to forward invariance of the exterior of each disk. The squared barrier
+Keep the command near $`u_{\mathrm{nom}}`$ subject to forward invariance of the exterior of each disk. The squared barrier
 
-$$
+```math
 h(p) = \|p - p_{\mathrm{vessel}}\|^2 - r_{\mathrm{safe}}^2
-$$
+```
 
-has safe set $\mathcal{C} = \{h \ge 0\}$. Admissible commands satisfy $\dot h + \alpha(h) \ge 0$. The nearest-command filter is
+has safe set $`\mathcal{C} = \{h \ge 0\}`$. Admissible commands satisfy $`\dot h + \alpha(h) \ge 0`$. The nearest-command filter is
 
-$$
+```math
 \min_u \|u - u_{\mathrm{nom}}\|^2 \quad \text{subject to} \quad \dot h(x,u) + \alpha(h(x)) \ge 0.
-$$
+```
 
-The scored barrier is the signed distance $h_i(x) = \|x - c_i\| - R_i - m$ with $m = 1$ mm, which is the same disk. The code projects onto that half-space and rejects any 10 ms step that would enter the disk. It does not call a quadratic-program solver. A tangent slide is added when a head-on attractor would otherwise be projected to zero.
+The scored barrier is the signed distance $`h_i(x) = \|x - c_i\| - R_i - m`$ with $`m = 1`$ mm, which is the same disk. The code projects onto that half-space and rejects any 10 ms step that would enter the disk. It does not call a quadratic-program solver. A tangent slide is added when a head-on attractor would otherwise be projected to zero.
 
 ### 2.3 Hold and retract
 
